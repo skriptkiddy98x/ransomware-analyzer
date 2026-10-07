@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="900" height="420" rx="14" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="24" y="36" font-size="20" font-weight="700" fill="#1f2328">ransomware-analyzer — architecture</text>
+
+  <!-- Sample -->
+  <rect x="24" y="70" width="150" height="60" rx="10" fill="#eef2ff" stroke="#6b7bdb"/>
+  <text x="99" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3b8c">Suspicious</text>
+  <text x="99" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3b8c">sample</text>
+
+  <!-- Static -->
+  <rect x="230" y="40" width="250" height="150" rx="10" fill="#f6f8fa" stroke="#57606a"/>
+  <text x="355" y="66" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2328">Static analysis (safe)</text>
+  <text x="246" y="92" font-size="12.5" fill="#444c56">• hashes, PE sections + entropy</text>
+  <text x="246" y="112" font-size="12.5" fill="#444c56">• capability flags from imports</text>
+  <text x="246" y="132" font-size="12.5" fill="#444c56">• strings + IOC extraction</text>
+  <text x="246" y="152" font-size="12.5" fill="#444c56">• YARA matching</text>
+  <text x="246" y="172" font-size="12" fill="#6e7781">sample is never executed</text>
+
+  <!-- Detonation / observer -->
+  <rect x="230" y="230" width="250" height="150" rx="10" fill="#fff5f5" stroke="#d1565b"/>
+  <text x="355" y="256" text-anchor="middle" font-size="15" font-weight="700" fill="#8a2a2e">Behavioral observer</text>
+  <text x="355" y="274" text-anchor="middle" font-size="11.5" fill="#8a2a2e">(detonation — isolated VM only)</text>
+  <text x="246" y="300" font-size="12.5" fill="#444c56">• filesystem events + entropy</text>
+  <text x="246" y="320" font-size="12.5" fill="#444c56">• mass-encryption / new ext</text>
+  <text x="246" y="340" font-size="12.5" fill="#444c56">• ransom-note detection</text>
+  <text x="246" y="360" font-size="12.5" fill="#444c56">• processes (Sysmon/psutil)</text>
+
+  <!-- Correlation -->
+  <rect x="530" y="135" width="200" height="150" rx="10" fill="#f6f8fa" stroke="#57606a"/>
+  <text x="630" y="161" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2328">Correlation</text>
+  <text x="546" y="187" font-size="12.5" fill="#444c56">• MITRE ATT&amp;CK map</text>
+  <text x="546" y="207" font-size="12.5" fill="#444c56">• scoring + verdict</text>
+  <text x="546" y="227" font-size="12.5" fill="#444c56">• family attribution</text>
+  <text x="546" y="247" font-size="12.5" fill="#444c56">• IOC export</text>
+
+  <!-- Report -->
+  <rect x="762" y="155" width="114" height="110" rx="10" fill="#eafaef" stroke="#3fae63"/>
+  <text x="819" y="200" text-anchor="middle" font-size="14" font-weight="700" fill="#1a7f37">HTML</text>
+  <text x="819" y="222" text-anchor="middle" font-size="14" font-weight="700" fill="#1a7f37">+ JSON</text>
+  <text x="819" y="242" text-anchor="middle" font-size="12" fill="#1a7f37">report</text>
+
+  <!-- arrows -->
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#57606a"/></marker></defs>
+  <line x1="174" y1="95" x2="228" y2="110" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="174" y1="105" x2="228" y2="300" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="480" y1="120" x2="528" y2="175" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="480" y1="300" x2="528" y2="235" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="730" y1="210" x2="760" y2="210" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+</svg>
