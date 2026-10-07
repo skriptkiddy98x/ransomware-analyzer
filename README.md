@@ -58,7 +58,7 @@ first-pass triage.
 ## Install
 
 ```bash
-git clone https://github.com/<your-user>/ransomware-analyzer
+git clone https://github.com/skriptkiddy98x/ransomware-analyzer
 cd ransomware-analyzer
 pip install -r requirements.txt
 ```
