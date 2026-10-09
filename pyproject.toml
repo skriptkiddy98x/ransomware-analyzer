@@ -1,0 +1,6 @@
+[tool.pytest.ini_options]
+# Make the repo root importable regardless of how pytest is invoked
+# (fixes "ModuleNotFoundError: No module named 'analyzer'" when pytest
+# is run as a console script instead of `python -m pytest`).
+pythonpath = ["."]
+testpaths = ["tests"]
